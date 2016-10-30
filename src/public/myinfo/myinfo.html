@@ -1,0 +1,18 @@
+<div class="center-div">
+    <div class="form-div" ng-show="infoCtrl.selections !== undefined">
+        <p>First Name: {{ infoCtrl.selections.firstName }}</p>
+        <p>Last Name: {{ infoCtrl.selections.lastName }}</p>
+        <p>Email: {{ infoCtrl.selections.email }}</p>
+        <p>Phone: {{ infoCtrl.selections.phone }}</p>
+        <p>Favorite Menu Item: </p>
+        <ul>
+            <li>Title: {{ infoCtrl.selections.favorite.name }}</li>
+            <li>Description: {{ infoCtrl.selections.favorite.description }}</li>
+            <li>Short Name: {{ infoCtrl.selections.favorite.short_name }}</li>
+            <li><img src="{{ infoCtrl.menuImage }}"></li>
+        </ul>
+    </div>
+    <div class="form-div" ng-show="infoCtrl.selections === undefined">
+        <p>Not Signed Up Yet!  <a ng-href="#/signup">Sign Up Now!</a></p>
+    </div>
+</div>
